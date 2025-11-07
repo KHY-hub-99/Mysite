@@ -78,8 +78,8 @@ ul {
 }
 
 .header__logo__img {
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
 }
 
 .header__logo__title {
@@ -104,4 +104,51 @@ ul {
 .header_menu_item.active {
   border: 1px solid var(--ca);
   border-radius: 5px;
+}
+
+/* home */
+#home {
+  background-color: var(--cp);
+  color: var(--ct);
+  padding: 7rem 1rem 5rem; /* 위 아래 좌우 */
+  text-align: center;
+}
+
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  border: 3px solid var(--cp);
+  object-fit: contain;
+  object-position: center top;
+  margin-top: 1rem;
+}
+
+.home__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.home__title--strong {
+  color: var(--ca);
+}
+
+.home__description {
+  font-size: 1.5rem;
+}
+
+.home__contact {
+  display: inline-block;
+  background-color: var(--ca);
+  color: var(--cp);
+  margin: 2rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.home__contact:hover {
+  background-color: transparent;
+  color: var(--ct);
+  outline: 2px solid var(--ca);
 }
