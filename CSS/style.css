@@ -30,8 +30,8 @@
   --ca: var(--color-blue);
   --cav: var(--color-orange);
   --ct: var(--color-white);
-  --color-black: #050a13;
-  --color-gray: #1b1e26;
+  --color-black: #272727;
+  --color-gray: #797a7a;
   --color-blue: #03e8f9;
   --color-orange: #fd6413;
   --color-white: white;
@@ -76,6 +76,12 @@ ul {
 .description {
   font-size: 1.5rem;
   margin: 0.5rem 0;
+}
+
+button {
+  background-color: transparent;
+  outline: 0;
+  border: 0;
 }
 
 /* header */
@@ -182,7 +188,7 @@ ul {
 }
 
 .major {
-  background-color: var(--cpv);
+  background-color: var(--cp);
   padding: 2rem 1rem;
   color: var(--ct);
   border-radius: 1rem;
@@ -230,4 +236,168 @@ ul {
 .jobs img {
   width: 300px;
   margin-right: 20px;
+}
+
+/* skills */
+#skills {
+  background-color: var(--cp);
+  color: var(--ct);
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  margin: 2rem 3rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.4),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.skills__title {
+  color: var(--ca);
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.skills__coding {
+  grid-row: span 2;
+  padding: 1rem;
+  background-color: var(--cp);
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.bar__metadata {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bar__bg {
+  width: 100%;
+  height: 3px;
+  background-color: var(--cav);
+}
+
+.bar__value {
+  height: 3px;
+  background-color: var(--ca);
+}
+
+.skills__tools {
+  padding: 1rem;
+  background-color: var(--cpv);
+}
+
+.skills__etc {
+  padding: 1rem;
+  background-color: var(--cp);
+  filter: brightness(150%);
+}
+
+/* work */
+#work {
+  background-color: var(--cp);
+  color: var(--ct);
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem;
+  gap: 1rem;
+}
+
+.category {
+  position: relative;
+  color: var(--ct);
+  font-size: 1.1rem;
+  padding: 0.5rem 3rem;
+  border-radius: 5px;
+  border: 1px solid var(--ca);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.category--selected {
+  background-color: var(--ca);
+  color: var(--cp);
+}
+
+.category__count {
+  opacity: 0;
+  position: absolute;
+  top: -20px;
+  right: 16px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 100%;
+  background-color: var(--cav);
+  color: var(--ct);
+  transition: all 250ms ease-in;
+}
+
+.category--selected .category__count,
+.category:hover .category__count {
+  opacity: 1;
+  top: 0;
+}
+
+.projects {
+  display: grid;
+  /* 가로로 4개의 칸을 만들고 각각의 칸을 동일한 너비로 나눔 */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.project {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project__img {
+  width: 100%;
+}
+
+.project__metadata {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  transition: all 250ms ease-in;
+  transform: translateY(-10px);
+}
+
+.project__metadata:hover {
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+
+.project__title:after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 0.5rem;
+  width: 50px;
+  height: 2px;
+  background-color: var(--ca);
 }
