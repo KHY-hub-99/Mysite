@@ -8,9 +8,9 @@ IntersectionObserver를 사용하여 스크롤 위치에 따라 내비게이션 
 
 1. 요소 선택:
 
-   sections: id 속성을 가진 모든 <section> 요소를 선택합니다 (페이지의 콘텐츠 섹션).
+   \sections: \id 속성을 가진 모든 \<section> 요소를 선택합니다 (페이지의 콘텐츠 섹션).
 
-   menuItems: 클래스가 .header_menu_item인 모든 메뉴 링크를 선택합니다.
+   \menuItems: 클래스가 \ .header_menu_item인 모든 메뉴 링크를 선택합니다.
 
 2. Observer 생성:
 
