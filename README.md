@@ -1,10 +1,10 @@
 # 📌 IntersectionObserver 개요
 
-`IntersectionObserver API`는 대상 요소(target element)가 상위 요소(ancestor element) 또는 **뷰포트(viewport)**와 교차하는(intersecting) 변화를 비동기적으로 관찰할 수 있는 방법을 제공하는 웹 API입니다. 이 API는 특히 스크롤 이벤트를 사용하여 요소를 감시할 때 발생하는 성능 문제를 해결하기 위해 설계되었습니다.
+`IntersectionObserver API`는 대상 요소(target element)가 상위 요소(ancestor element) 또는 뷰포트(viewport)와 교차하는(intersecting) 변화를 비동기적으로 관찰할 수 있는 방법을 제공하는 웹 API입니다. 이 API는 특히 스크롤 이벤트를 사용하여 요소를 감시할 때 발생하는 성능 문제를 해결하기 위해 설계되었습니다.
 
 # 💡 예제 코드 설명
 
-IntersectionObserver를 사용하여 스크롤 위치에 따라 내비게이션 메뉴 항목을 하이라이트하는 일반적인 패턴입니다.
+`IntersectionObserver`를 사용하여 스크롤 위치에 따라 내비게이션 메뉴 항목을 하이라이트하는 일반적인 패턴입니다.
 
 1. **요소 선택:**
 
