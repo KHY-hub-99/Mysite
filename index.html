@@ -346,10 +346,19 @@
           <li>
             <a
               class="contact__link"
-              href="https://github.com/KHY-hub-99"
+              href="https://mail.google.com"
               target="_blank"
               title="github"
-              ><i class="fa-brands fa-github"></i
+              ><i class="fa-brands fa-google"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="contact__link"
+              href="https://www.facebook.com/"
+              target="_blank"
+              title="github"
+              ><i class="fa-brands fa-facebook"></i
             ></a>
           </li>
         </ul>
@@ -380,6 +389,17 @@
       );
 
       sections.forEach((section) => observer.observe(section));
+
+      const header = document.querySelector(".header");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 150) {
+          // 50px 이상 스크롤 시
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
     </script>
   </body>
 </html>

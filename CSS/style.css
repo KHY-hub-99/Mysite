@@ -89,12 +89,20 @@ button {
   background-color: var(--cp);
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  background-color: rgba(255, 255, 255, 0); /* 기본 투명 */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.header.scrolled {
+  background-color: var(--cp); /* 불투명 */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .header__logo {
@@ -168,18 +176,19 @@ button {
 
 .home__contact {
   display: inline-block;
-  background-color: var(--ca);
-  color: var(--cp);
+  background-color: var(--cp);
+  color: var(--ca);
   margin: 2rem;
   padding: 0.5rem 1rem;
   font-weight: bold;
+  border: 2px solid var(--ca);
   border-radius: 5px;
 }
 
 .home__contact:hover {
   background-color: transparent;
   color: var(--ct);
-  outline: 2px solid var(--ca);
+  outline: 1px solid var(--ca);
 }
 
 /* about */
@@ -228,11 +237,11 @@ button {
 }
 
 .job__name {
-  color: var(--cp);
+  color: var(--ca);
 }
 
 .job__period {
-  color: var(--cp);
+  color: black;
   font-size: 0.8rem;
 }
 
