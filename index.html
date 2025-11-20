@@ -356,5 +356,30 @@
         <p>&copy; Khy all rights reserved</p>
       </div>
     </footer>
+    <script>
+      const sections = document.querySelectorAll("section[id]");
+      console.log(sections);
+      const menuItems = document.querySelectorAll(".header_menu_item");
+      console.log(menuItems);
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute("id");
+              const menuItem = document.querySelector(
+                `.header_menu_item[href="#${id}"]`
+              );
+
+              menuItems.forEach((item) => item.classList.remove("active"));
+              if (menuItem) menuItem.classList.add("active");
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+    </script>
   </body>
 </html>

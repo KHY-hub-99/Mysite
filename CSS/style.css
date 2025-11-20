@@ -128,8 +128,11 @@ button {
 }
 
 .header_menu_item.active {
-  border: 1px solid var(--ca);
-  border-radius: 5px;
+  /* border: 1px solid var(--ca);
+  border-radius: 5px; */
+  color: var(--ca);
+  font-weight: bold;
+  border-bottom: 2px solid var(--ca);
 }
 
 /* home */
